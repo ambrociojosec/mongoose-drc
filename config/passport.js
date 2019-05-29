@@ -6,7 +6,10 @@ var Visitor = require('../models/visitor');
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_SECRET,
-    callbackURL: "https://undocu-resources-drc.herokuapp.com/oauth2callback"
+    // this is for heroku
+    // callbackURL: "https://undocu-resources-drc.herokuapp.com/oauth2callback"
+    // this is for localhost
+    callbackURL: 'http://localhost:3000/oauth2callback'
   },
   function(accessToken, refreshToken, profile, cb) {
     // a user has logged in via OAuth!

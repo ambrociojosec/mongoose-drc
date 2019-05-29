@@ -16,6 +16,8 @@ require('./config/passport')
 
 var indexRouter = require('./routes/index');
 var visitorsRouter = require('./routes/visitors');
+var californiaRouter = require('./routes/california');
+
 
 var app = express();
 
@@ -41,6 +43,7 @@ app.use(passport.session());
 
 app.use('/', indexRouter);
 app.use('/visitors', visitorsRouter);
+app.use('/', californiaRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
