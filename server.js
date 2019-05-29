@@ -4,7 +4,9 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 
 var express = require('express');
-// var session = require('express-session');
+var cookieParser = require('cookie-parser');
+
+var session = require('express-session');
 var passport = require('passport')
 
 require('dotenv').config();
@@ -26,12 +28,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(cookieParser());
 
-// app.use(session({
-//   secret: 'SEI Rocks!',
-//   resave: false,
-//   saveUninitialized: true
-// }));
+app.use(session({
+  secret: 'SEI Rocks!',
+  resave: false,
+  saveUninitialized: true
+}));
 
 app.use(passport.initialize());
 app.use(passport.session());
