@@ -6,6 +6,7 @@ module.exports = {
 	deleteOne,
 	edit
 }
+ 
 function edit (req, res) {
 	Cali.findById({ _id: req.params.id },function(err, california){
 		california.content = req.body.Econtent;
@@ -13,17 +14,8 @@ function edit (req, res) {
 		if(err) res.redirect('/california');
 		california.save();
 		res.redirect('back');
-		// res.redirect('/california');
 	})
 }
-// function deleteOne (req, res) {
-// 	Cali.findByIdAndDelete({_id:req.params.id},function(err,california){
-// 		if(err) res.render('/california');
-// 		california.save();
-// 		res.redirect('/california');
-// 	});
-// }
-
 function deleteOne(req, res){
 	Cali.findByIdAndDelete({_id:req.params.id},function(err,california){
 		california.save();
@@ -34,18 +26,26 @@ function deleteOne(req, res){
 
 function create(req, res) {
 	california = new Cali(req.body);
+	california.user = req.user.id;
+	console.log('req.user.id=>>>',req.user.id);
+	Visitor.findById(req.user.id, function(err,visitor){
+		visitor.posts.push(california.id);
+		visitor.save();
+	})
+
 	california.save();
 	console.log(california)
 	res.redirect('/california')
 }
 
 function index(req, res){
-	// res.render('visitors/california')
-	// console.log('loaded')
-	Cali.find({}, function(err, california){
-		if(err) res.redirect('/california')
-		// console.log(california)
+	Cali.find({}).populate('user').exec((err,california)=>{
 		res.render('visitors/california',
-		{california});
+		{california, user:req.user});
 	});	
 }
+
+
+
+
+

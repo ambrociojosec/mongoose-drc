@@ -12,7 +12,8 @@ router.post('/california/:id', californiaCtrl.deleteOne);
 
 router.post('/californina/:id/edit', californiaCtrl.edit);
 
-// router.post('/california/:id', )
+//comment router
+router.post('/california',)
 
 
 

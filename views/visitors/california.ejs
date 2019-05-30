@@ -46,6 +46,8 @@
 			<div>
 				<p>Title : <%=cal.title%></p>
 				<p>Post : <%=cal.content%></p>
+
+				<%if(user.id===cal.user.id){%>
 				<form action="/californina/<%=cal._id%>/edit" method="POST">
 					<textarea name="Econtent" class="one" placeholder="Edit content"></textarea>
 					<button>Edit</button>
@@ -54,6 +56,12 @@
 				<form action="/california/<%=cal._id%>" method="POST">
 					<button>DELETE</button>
 				</form>
+				
+				<form action="/california/<%=cal._id%>" method="POST">
+					<textarea name="comment" class="commentOne"></textarea>
+				</form>
+				<%}%>
+
 				<br><br><br>
 			</div>
 			<% });%>
