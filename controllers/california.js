@@ -1,4 +1,5 @@
 const Cali = require('../models/cali');
+const Visitor = require('../models/visitor');
 
 module.exports = {
 	index,
