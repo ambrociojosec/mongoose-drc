@@ -1,7 +1,21 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.posts {
+  margin: 100px;
+}
+.editcontent {
+  margin: 35px;
 }
 
 a {
   color: #00B7FF;
+}
+.one {
+  height: 30px;
+  width: 200px;
 }
