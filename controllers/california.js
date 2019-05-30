@@ -5,7 +5,18 @@ module.exports = {
 	index,
 	create,
 	deleteOne,
-	edit
+	edit,
+	addComment
+}
+
+function addComment(req,res){
+	Cali.findById({ _id: req.params.id },function(err, california){
+		console.log(req.body);
+		california.comments.push(req.body)
+		if(err) res.redirect('/california');
+		california.save();
+		res.redirect('back');
+	})
 }
  
 function edit (req, res) {

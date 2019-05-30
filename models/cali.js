@@ -1,9 +1,9 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-// var commentSchema = new Schema({
-// 	comment: String
-// })
+var commentSchema = new Schema({
+	comment: String
+})
 
 var californiaSchema = new Schema({
 	title: String,
@@ -11,7 +11,8 @@ var californiaSchema = new Schema({
 	user: {
 		type: Schema.Types.ObjectId,
 		ref: "Visitor"
-	}
+	},
+	comments: [commentSchema]
 })
 
 module.exports = mongoose.model('Cali', californiaSchema);
