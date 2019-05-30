@@ -21,7 +21,7 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="http://localhost:3000">Home <span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="/visitors">Home <span class="sr-only">(current)</span></a>
 			</ul>
 			<form class="form-inline my-2 my-lg-0">
 				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -31,9 +31,12 @@
 	</nav>
 	<div class="posts">
 		<form action="/california" method="POST">
-			<input type="text" name="title" placeholder="title">
+			<input required type="text" name="title" placeholder="title">
+			<br>
+			
 			<br>
 			<textarea name="content" id="" cols="30" rows="10" placeholder="post"></textarea>
+			<br>
 			<br>
 			<button>post</button>
 
@@ -43,14 +46,13 @@
 			<div>
 				<p>Title : <%=cal.title%></p>
 				<p>Post : <%=cal.content%></p>
-				<form action="/californina/<%=cal._id%>?_method=PUT" method="POST">
-					<textarea name="Econtent" class="one" placeholder="<%=cal.content%>"></textarea>
-					<button type="submit">Edit</button>
-					
+				<form action="/californina/<%=cal._id%>/edit" method="POST">
+					<textarea name="Econtent" class="one" placeholder="Edit content"></textarea>
+					<button>Edit</button>
 				</form>
 				
 				<form action="/california/<%=cal._id%>" method="POST">
-					<button type="submit">X</button>
+					<button>DELETE</button>
 				</form>
 				<br><br><br>
 			</div>
