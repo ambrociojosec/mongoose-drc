@@ -28,6 +28,8 @@ Launch app [_**Here!**_](https://undocu-resources-drc.herokuapp.com)
 3. find resources
 4. post resources to update our database
 
+Link to [_**Trello Board**_](https://trello.com/invite/b/YQP0vJ1i/44b5e24d7dfed60e140185cdb2d73b92/sei-project-2)
+
 
 -----
 **Next Steps**
