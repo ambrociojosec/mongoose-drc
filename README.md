@@ -1,6 +1,6 @@
 # UndocuResources
 <br>
-------
+
 UndocuResources es una base de datos de recursos legales y educativos disponibles al nivel federal, estatal y por condado donde las personas indocumentadas pueden encontrar recursos que se adaptan para satisfacer sus necesidades individuales. Este centro centro de recursos también permite que la comunidad de indocumentados y sus aliados se conecten y se apoyen entre sí a través de una extensa red nacional.
 
 UndocuResources is a database of legal, education, and advocacy related resources organized by state and county where undocumented individuals can find resources that are tailored to match their individual needs. UndocuResources also allows the undocumented community and its allies to connect and support one another through an extensive, national network.
@@ -8,7 +8,7 @@ UndocuResources is a database of legal, education, and advocacy related resource
 
 -----
 ![](https://i.imgur.com/zyznxGc.png)
-![] (https://i.imgur.com/wTZzWbf.jpg)
+![](https://i.imgur.com/wTZzWbf.jpg)
 
 ------
 **Technologies Used**
