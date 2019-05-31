@@ -57,10 +57,13 @@
 					<button>DELETE</button>
 				</form>
 				
-				<form action="/california/<%=cal._id%>" method="POST">
+				<form action="/california/<%=cal._id%>/comment" method="POST">
 					<textarea name="comment" class="commentOne"></textarea>
+					<input type="submit" value="submit">
 				</form>
-				<%= cal.comments %>
+				<% cal.comments.forEach(c => { %>
+					<%= c.comment %>
+				<% }) %>
 				<%}%>
 
 				<br><br><br>
