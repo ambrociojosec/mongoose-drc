@@ -19,3 +19,18 @@ a {
   height: 30px;
   width: 200px;
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 5px;
+  background-color: orange;
+  padding: 5px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255,0.8);
+  border: 1px solid black;
+  text-align: center;
+  font-size: 10px;
+}
